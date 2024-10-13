@@ -8,6 +8,10 @@ This project implements a RESTful API for managing various types of discount cou
 - Apply applicable coupons to a shopping cart and calculate discounts.
 - Handle various edge cases related to coupon usage, expiry, limits, and conflicts.
 
+## Command to run unit testcases
+
+- `go test ./...`
+
 ## API Endpoints
 
 - `POST /coupons`: Create a new coupon.
@@ -280,3 +284,35 @@ This project implements a RESTful API for managing various types of discount cou
   }
 }
 ```
+
+## Potential Enhancements: Constrained Cases for Future Implementation
+
+- **Support for More Complex Coupon Structures**: Expand the coupon system to handle more sophisticated use cases, such as:
+  - **Time-sensitive Coupons**: Coupons that are only valid during specific time windows (e.g., flash sales).
+  - **Location-based Coupons**: Coupons that are only applicable for users in certain geographical regions.
+  - **Tiered Discounts**: Coupons that offer different discount levels based on the total cart value (e.g., $10 off for orders over $100, $20 off for orders over $200).
+
+- **User-Specific Coupons**: Implement user-specific or one-time-use coupons, ensuring that certain coupons can only be applied by specific users or only used once per user.
+
+- **Coupon Stacking Rules**: Introduce more flexible rules for **stacking** or combining multiple coupons, allowing users to apply multiple discounts based on predefined rules.
+
+- **Coupon Validation Analytics**: Add a logging and analytics system to track coupon usage, including how often coupons are applied, rejected, or lead to successful conversions, providing better insights for marketing.
+
+- **Customizable Coupon Expiration Notifications**: Notify users via email or in-app alerts when a coupon is nearing its expiration date, encouraging them to use it before it expires.
+
+- **Enhanced Security**: Add features such as **rate limiting** and **CAPTCHA** to prevent abuse of coupon generation or application processes, ensuring system stability and security.
+
+- **Integration with Third-Party Systems**: Support integration with third-party platforms such as **CRM systems** (e.g., Salesforce) or **email marketing platforms** (e.g., Mailchimp) to provide automated coupon campaigns and better targeting for discounts .
+
+- **Dynamic Coupon Creation via API**: Allow partners or vendors to dynamically generate and distribute coupons via API, with real-time monitoring and enforcement of restrictions.
+
+- **Enhanced User Feedback**: Provide more detailed, user-friendly error messages and suggestions when a coupon cannot be applied, helping users understand why a coupon was rejected.
+
+- **Loyalty Program Integration**: Incorporate loyalty programs where users can earn points for purchases, which can then be redeemed for discounts or exclusive coupons.
+
+- **Seasonal and Event-Based Discounts**: Automate the creation and activation of seasonal or event-based coupons (e.g.birthdays) to make it easier for businesses to run promotions.
+
+- **A/B Testing for Coupons**: Introduce an **A/B testing** system where businesses can experiment with different coupon structures (e.g., percentage off vs. fixed amount) and analyze which performs better with customers.
+
+
+
